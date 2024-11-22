@@ -10,16 +10,20 @@
 
 </head>
 
-<body class="w-full">
+<body class="w-screen">
     <header class="bg-[#4a276b] text-white py-2 px-6 flex justify-between items-center">
         <img src="persona-logo-navbar.svg" alt="Persona" class="m-0">
-        <nav>
-            <ul class="flex space-x-8 text-lg">
-                <li><a href="#about" class="hover:underline">Sobre nós</a></li>
-                <li><a href="#product" class="hover:underline">Produtos</a></li>
-                <li><a href="#depoimentos" class="hover:underline">Depoimentos</a></li>
-                <li><a href="#faq" class="hover:underline">Perguntas frequentes</a></li>
-                <li><a href="#contact" class="hover:underline mr-6">Contato</a></li>
+        <button id="menu-toggle" class="block sm:hidden text-2xl">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="sidebar"
+            class="fixed left-0 top-0 h-full w-2/3 bg-[#4a276b] text-white z-50 transform -translate-x-full transition-transform duration-300 sm:static sm:translate-x-0 sm:flex sm:space-x-8 sm:items-center">
+            <ul class="flex flex-col sm:flex-row sm:space-x-8 text-lg p-6">
+                <li><a href="#about" class="hover:underline block py-2">Sobre nós</a></li>
+                <li><a href="#product" class="hover:underline block py-2">Produtos</a></li>
+                <li><a href="#depoimentos" class="hover:underline block py-2">Depoimentos</a></li>
+                <li><a href="#faq" class="hover:underline block py-2">Perguntas frequentes</a></li>
+                <li><a href="#contact" class="hover:underline block py-2">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -28,43 +32,49 @@
         <section id="intro" class="h-96">
 
         </section>
-        <section id="about">
-            <div class="relative">
 
-                <div class="absolute inset-0 flex flex-col w-9/12 text-[#1B3F61] py-24">
-                    <h1 class="text-2xl font-bold sm:text-3xl lg:text-4xl ml-10 mb-8">Sobre nós</h1>
-                    <p class="mt-2 text-sm sm:text-base lg:text-lg ml-10 w-3/5 mb-4">Somos uma equipe comprometida com a
-                        criação
-                        de soluções tecnológicas que fazem a diferença.</p>
-                    <p class="mt-2 text-sm sm:text-base lg:text-lg ml-10 w-3/5">
+        <section id="about" class="relative py-16 px-4 text-[#1B3F61]">
+            <div class="max-w-screen-lg mx-8 relative z-10">
+                <div class="text-center sm:text-left">
+                    <h1 class="text-2xl font-bold sm:text-3xl lg:text-4xl mb-6 mt-6">Sobre nós</h1>
+                    <p class="text-base sm:text-lg lg:text-xl mb-4">
+                        Somos uma equipe comprometida com a criação de soluções tecnológicas que fazem a diferença.
+                    </p>
+                    <p class="text-base sm:text-lg lg:text-xl">
                         Nossa paixão é desenvolver sistemas que capacitam indivíduos frequentemente negligenciados,
-                        promovendo sua independência e bem-estar.</p>
+                        promovendo sua independência e bem-estar.
+                    </p>
                 </div>
-
-                <svg class="w-full h-32 sm:h-40 lg:h-96" viewBox="0 0 1440 884" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                    <path
-                        d="M0 34.5L106.059 80.8397C143.601 97.2426 182.62 110.031 222.588 119.032C306.029 137.823 392.374 139.83 476.598 124.935L516.742 117.836C563.157 109.628 608.755 97.3342 653.005 81.0977L719.113 56.841C759.638 41.9714 801.3 30.4062 843.691 22.2586L884.686 14.3793C934.449 4.81472 985.009 0 1035.68 0H1094.78C1132.16 0 1169.44 3.84447 1206.04 11.4727C1278.91 26.6632 1347.89 56.6157 1408.75 99.4842L1440 121.5V883.5H0V34.5Z"
-                        fill="#93D4E2" />
-                </svg>
             </div>
+            <svg class="absolute top-0 left-0 w-full h-full z-0" viewBox="0 0 1440 884" fill="none"
+                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path
+                    d="M0 34.5L106.059 80.8397C143.601 97.2426 182.62 110.031 222.588 119.032C306.029 137.823 392.374 139.83 476.598 124.935L516.742 117.836C563.157 109.628 608.755 97.3342 653.005 81.0977L719.113 56.841C759.638 41.9714 801.3 30.4062 843.691 22.2586L884.686 14.3793C934.449 4.81472 985.009 0 1035.68 0H1094.78C1132.16 0 1169.44 3.84447 1206.04 11.4727C1278.91 26.6632 1347.89 56.6157 1408.75 99.4842L1440 121.5V883.5H0V34.5Z"
+                    fill="#93D4E2" />
+            </svg>
+        </section>
 
-            <div class="bg-[#FAE0F3] h-auto w-full flex flex-wrap items-center justify-center gap-8 text-[#381876] py-16">
+        <section class=" bg-[#FAE0F3] ">
+            <div
+                class="bg-[#FAE0F3] h-auto w-full flex flex-wrap items-center justify-center gap-8 text-[#381876] py-16">
 
-                <div class="w-full sm:w-1/2 lg:w-1/4 text-center bg-gradient-to-bl from-blue-200 to-[#F6BBD3] p-4 rounded-3xl m-2 px-8">
+                <div
+                    class="w-full sm:w-1/2 lg:w-1/4 text-center bg-gradient-to-bl from-blue-200 to-[#F6BBD3] p-4 rounded-3xl m-2 px-8">
 
                     <i class="fa-solid fa-flag fa-3x m-2"></i>
                     <h2 class="m-4 font-bold text-2xl">Missão</h2>
                     <p> Nossa missão é criar soluções tecnológicas que promovam a inclusão, autonomia e bem-estar de
                         pessoas muitas vezes exclusas pela sociedade.</p>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/4 text-center bg-gradient-to-bl from-blue-200 to-[#F6BBD3] p-4 rounded-3xl m-2 px-8">
+                <div
+                    class="w-full sm:w-1/2 lg:w-1/4 text-center bg-gradient-to-bl from-blue-200 to-[#F6BBD3] p-4 rounded-3xl m-2 px-8">
                     <i class="fa-solid fa-eye fa-3x m-2"></i>
                     <h2 class="m-4 font-bold text-2xl">Visão</h2>
                     <p> Visualizamos um mundo onde a tecnologia é acessível e adaptada para atender às necessidades
                         específicas de cada pessoa.</p>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/4 text-center bg-gradient-to-bl from-blue-200 to-[#F6BBD3] p-4 rounded-3xl m-2 px-8">
+                <div
+                    class="w-full sm:w-1/2 lg:w-1/4 text-center bg-gradient-to-bl from-blue-200 to-[#F6BBD3] p-4 rounded-3xl m-2 px-8">
 
                     <i class="fa-solid fa-scale-balanced fa-3x m-2"></i>
                     <h2 class="m-4 font-bold text-2xl">Valores</h2>
@@ -75,44 +85,47 @@
         </section>
 
 
-        <section id="product" class="relative text-[#381B50]">
-
-            <div class="absolute inset-0 p-8">
-                <h1 class="text-2xl font-bold sm:text-3xl lg:text-4xl mb-8 mt-12">Produto</h1>
-                <p class="mt-2 text-sm sm:text-base lg:text-lg w-1/2">
+        <section id="product" class="relative bg-[#FAE0F3] py-16 px-4 text-[#381B50]">
+            <div class="max-w-screen-lg mx-8 relative z-10">
+                <h1 class="text-2xl font-bold sm:text-3xl lg:text-4xl mb-6">Produto</h1>
+                <p class="text-base sm:text-lg lg:text-xl mb-4">
                     O Astra é uma aplicação para dispositivos móveis intuitiva projetada para atender às necessidades de
                     pessoas com deficiências neuropsicológicas.
-                    <br><br>
+                </p>
+                <p class="text-base sm:text-lg lg:text-xl mb-4">
                     Ela oferece recursos como lista de tarefas, lembretes, rastreamento de humor, artigos para
                     aprendizagem, meditação guiada, diário emocional e de autocuidado.
-                    <br><br>
-                    Nosso objetivo é capacitar essas pessoas a gerenciarem suas emoções e se sentirem mais conectados
-                    consigo mesmos e com o mundo ao seu redor.
+                </p>
+                <p class="text-base sm:text-lg lg:text-xl">
+                    Nosso objetivo é capacitar essas pessoas a gerenciarem suas emoções e se sentirem mais conectadas
+                    consigo mesmas e com o mundo ao seu redor.
                 </p>
             </div>
-            <img src="bg-produto.svg" alt="" class="w-screen">
+            <img src="bg-produto.svg" alt="Fundo ilustrativo do produto" class="absolute top-0 left-0 w-full h-full object-cover z-0" />
         </section>
+        
 
-        <section id="depoimentos" class="bg-[#FAE0F3] py-10 p-8 text-[#2D0A2F]">
+        <section id="depoimentos" class="bg-[#FAE0F3] py-10 px-8 text-[#2D0A2F]">
             <h1 class="text-2xl font-bold sm:text-3xl lg:text-4xl mb-8 mt-12">O que nossos usuários dizem?</h1>
-            <div class="flex justify-center items-center h-60 space-x-6 *:h-full">
-                <div class="w-1/4 bg-gray-100 p-6 rounded-sm">
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <div class="w-full sm:w-1/2 lg:w-1/4 bg-gray-100 p-6 rounded-md text-center">
                     <h2 class="font-bold mb-4">Alonso Vieira</h2>
                     <p class="mb-4">⭐⭐⭐⭐</p>
                     <p>O Astra me ajudou a organizar minha rotina e me sentir mais no controle das minhas emoções!</p>
                 </div>
-                <div class="w-1/4 bg-gray-100 p-6 rounded-sm">
+                <div class="w-full sm:w-1/2 lg:w-1/4 bg-gray-100 p-6 rounded-md text-center">
                     <h2 class="font-bold mb-4">Maria Santos</h2>
                     <p class="mb-4">⭐⭐⭐⭐⭐</p>
                     <p>A funcionalidade de meditação é incrível, me sinto mais relaxada todos os dias.</p>
                 </div>
-                <div class="w-1/4 bg-gray-100 p-6 rounded-sm">
+                <div class="w-full sm:w-1/2 lg:w-1/4 bg-gray-100 p-6 rounded-md text-center">
                     <h2 class="font-bold mb-4">Ana Clara</h2>
                     <p class="mb-4">⭐⭐⭐⭐⭐</p>
                     <p>Me sinto mais acolhida com a presença do mascote quando faço minhas atividades!</p>
                 </div>
             </div>
         </section>
+
 
         <section id="faq" class="bg-purple-50 py-16 px-6">
             <h2 class="text-3xl font-bold text-center mb-6">Perguntas frequentes</h2>
@@ -124,7 +137,8 @@
                 </div>
                 <div class="mb-4">
                     <h3 class="font-bold text-lg">O Astra é gratuito?</h3>
-                    <p>Sim, o Astra é gratuito, com todas as funcionalidades essenciais disponíveis para todos os usuários.
+                    <p>Sim, o Astra é gratuito, com todas as funcionalidades essenciais disponíveis para todos os
+                        usuários.
                     </p>
                 </div>
                 <div>
@@ -143,10 +157,21 @@
             <h2 class="font-bold text-lg">Entre em contato conosco</h2>
             <p>E-mail: <a href="mailto:seugrupopersona@gmail.com" class="underline"> seugrupopersona@gmail.com</a></p>
             <div class="flex justify-center space-x-4 mt-4">
-            <p><a href="https://www.instagram.com/tcc_persona/" class="hover:underline"><i class="fa-brands fa-instagram fa-2x"></i></a> @tcc_persona</p>
+                <p><a href="https://www.instagram.com/tcc_persona/" class="hover:underline"><i
+                            class="fa-brands fa-instagram fa-2x"></i></a> @tcc_persona</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+    </script>
+
 </body>
 
 </html>
